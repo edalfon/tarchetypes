@@ -8,6 +8,7 @@ tar_copy_target <- function(target) {
   targets::tar_target_raw(
     name = target$settings$name,
     command = target$command$expr,
+    deps = target$command$deps,
     pattern = target$settings$pattern,
     packages = target$command$packages,
     library = target$command$library,
